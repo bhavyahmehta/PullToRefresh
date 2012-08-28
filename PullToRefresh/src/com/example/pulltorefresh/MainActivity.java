@@ -84,7 +84,7 @@ public class MainActivity extends Activity
 		protected void onPreExecute() 
 		{
 			mRefreshViewImage.clearAnimation();
-	        mRefreshViewText.setVisibility(View.GONE);
+	        mRefreshViewText.setText(R.string.pull_to_refresh_refreshing_label);
 	        mRefreshViewImage.setVisibility(View.GONE);
 	        mRefreshViewProgress.setVisibility(View.VISIBLE);
 			scroll.setEnabled(false);
@@ -96,7 +96,7 @@ public class MainActivity extends Activity
 		{
 			try
 			{
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				//Do your task
 			} 
 			catch (InterruptedException e) 
@@ -114,14 +114,14 @@ public class MainActivity extends Activity
 			//added new view
 			View row=inflater.inflate(R.layout.added_refresh, null);
 			layout.addView(row);
-			
 			mRefreshViewProgress.setVisibility(View.GONE);
 			RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)scroll.getLayoutParams();
 			params.setMargins(0,0, 0, 0); 
 			scroll.setLayoutParams(params);					
-			mRefreshViewText.setVisibility(View.VISIBLE);
+			mRefreshViewText.setText(R.string.pull_to_refresh_pull_label); 
 		    mRefreshViewImage.setVisibility(View.VISIBLE);		    
 		    scroll.setEnabled(true);
+		    mRefreshState=PULL_TO_REFRESH;
 		    super.onPostExecute(result);
 		}
 		
@@ -175,6 +175,7 @@ public class MainActivity extends Activity
 								RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)v.getLayoutParams();
 								params.setMargins(0,topPadding, 0, 0); 
 								v.setLayoutParams(params);
+			                	
 			                }
 						
 						break;
@@ -190,6 +191,7 @@ public class MainActivity extends Activity
 							RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)v.getLayoutParams();
 							params.setMargins(0,0, 0, 0); 
 							v.setLayoutParams(params);
+						
 						}
 						
 						break;	
