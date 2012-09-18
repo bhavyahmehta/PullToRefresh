@@ -1,5 +1,5 @@
 Pull To refresh functionality in Android. 
 
-![Screenshot](https://github.com/bhavyahmehta/PullToRefresh/raw/master/1.png) 
-![Screenshot](https://github.com/bhavyahmehta/PullToRefresh/raw/master/2.png)
-![Screenshot](https://github.com/bhavyahmehta/PullToRefresh/raw/master/3.png)  
+![Screenshot](https://raw.github.com/bhavyahmehta/PullToRefresh/master/PullToRefresh/1.png) 
+![Screenshot](https://raw.github.com/bhavyahmehta/PullToRefresh/master/PullToRefresh/2.png)
+![Screenshot](https://raw.github.com/bhavyahmehta/PullToRefresh/master/PullToRefresh/3.png)  
